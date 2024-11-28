@@ -1,0 +1,103 @@
+{
+  "LocaleSwitcher": {
+    "switchLocale": "TR"
+  },
+  "Footer": {
+    "ev": "Home",
+    "contact": "Contact",
+    "about": "About Us",
+    "copyright": "All rights reserved"
+  },
+  "Navbar": {
+    "home": "Home",
+    "contact": "Contact",
+    "about": "About Us",
+    "login": "Login"
+  },
+  "AboutHome": {
+    "text": "What is EduMoodUp?",
+    "description": "EduMoodUp is an innovative educational project that aims to enhance classroom efficiency and strengthen student-teacher communication by measuring students' emotional states with an emoji-based system. The platform allows students to express their daily emotional states while giving teachers the opportunity to understand students' emotional needs and adjust their lesson plans accordingly. This way, teachers can create a more effective learning environment by considering the psychological states of students and increase classroom efficiency. EduMoodUp emphasizes the importance of emotional intelligence and communication in modern education, promoting a student-centered approach and contributing to the education of the future."
+  },
+  "WhatWeAim": {
+    "neyiamaçlıyoruz": "What Do We Aim For",
+    "education": {
+      "text": "Education",
+      "description": "Highlights the importance of emotional intelligence and communication in education to understand students' emotional states and improve learning processes."
+    },
+    "work": {
+      "text": "Work",
+      "description": "Provides teachers with the opportunity to better understand students' emotional states and adjust their lesson plans accordingly, facilitating their work and increasing classroom efficiency."
+    },
+    "life": {
+      "text": "Life",
+      "description": "Supports individuals in understanding their emotional needs in daily life and promoting healthy communication for a more balanced and happy life."
+    },
+    "world": {
+      "text": "World",
+      "description": "Aims to be adopted globally as a step towards understanding emotional needs and strengthening communication across all segments of society."
+    }
+  },
+  "ContactForHome": {
+    "text": "Contact Us"
+  },
+  "ContactHero": {
+    "text": "Contact Us"
+  },
+  "ContactForMe": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Enter your message",
+    "send": "Send"
+  },
+  "RightHS": {
+    "yeniNesilEğitim": "Next Generation Education",
+    "eğitimdePsikoloji": "Psychology in Education"
+  },
+  "CarouselHW": {
+    "universite": "University",
+    "nasıluni": "For universities joining EduMoodUp, we offer a special portal on the website. This portal allows universities to add their faculties, departments, and courses to the system. Additionally, they can register their teachers and students here. These steps enable universities to easily use EduMoodUp.",
+    "ogretmen": "Teacher",
+    "nasılogretmen": "EduMoodUp provides a mobile application for teachers. This application allows teachers to access student class schedules on their interface. Additionally, it sends notifications to students at the end of the lessons and asks them to express their emotional states. Teachers can view students' selections and analyze this information along with graphs showing students' psychological states.",
+    "ogrenci": "Student",
+    "nasılogrenci": "EduMoodUp also offers a mobile application for students. This application allows students to access their class schedules. Additionally, it sends notifications to students at the end of the lessons and asks them to express their emotional states. Students can indicate their emotional states by selecting an emoji. This information is used by teachers for analysis and helps students gain insights into their psychological states."
+  },
+  "HowWork": {
+    "nasılYapacağız": "How Will We Do It?"
+  },
+  "Results": {
+    "nelerYaptık": "What Have We Done?",
+    "okul": "School",
+    "öğrenci": "Student",
+    "öğretmen": "Teacher",
+    "ders": "Class"
+  },
+  "ResultsCard": {
+    "psikolojiölçtük": "Measured psychology and increased class efficiency"
+  },
+  "Error": {
+    "sayfayok": "There is no such page",
+    "sicde": "We are still working for you..."
+  },
+  "AboutExtra": {
+    "duygusalzeka": "Emotional Intelligence",
+    "duygusalzekatext": "EduMoodUp respects the different emotional needs and learning styles of students by providing an inclusive and equitable educational environment.",
+    "erisilebilirogrenim": "Accessible Learning",
+    "erisilebilirogrenimtext": "Our project supports continuous improvement in education and makes learning accessible to everyone by promoting lifelong learning opportunities for all.",
+    "isteesitlik": "Workplace Equality",
+    "isteesitliktext": "To support sustainable, inclusive, and sustained economic growth, EduMoodUp supports social and economic development by reducing inequalities in education.",
+    "ishayatindaesitlik": "Workplace Equality",
+    "ishayatindaesitliktext": "Our project promotes full and productive employment while helping students succeed in their careers by enhancing their emotional intelligence.",
+    "geleceginisgucu": "Future Workforce",
+    "geleceginisgucutext": "EduMoodUp supports diversity and inclusion in the workplace by strengthening emotional intelligence and communication skills.",
+    "adilisdunyasi": "Fair Business World",
+    "adilisdunyasietext": "EduMoodUp prepares the future workforce by focusing on the emotional needs of students as part of sustainable economic growth.",
+    "duygusalzekavekariyer": "Emotional Intelligence and Career",
+    "duygusalzekavekariyeretext": "Our project aims to create a fairer business world for everyone by reducing educational inequalities.",
+    "degisimeuyum": "Adaptation to Change",
+    "degisimeuyumtext": "EduMoodUp promotes sustainable, inclusive, and sustained economic growth by equipping students with emotional intelligence to adapt to changes in the business world.",
+    "cesitlilikteguc": "Strength in Diversity",
+    "cesitliliktegucetext": "EduMoodUp helps everyone reach their full potential by promoting diversity in education and the business world.",
+    "toplumsaladalet": "Social Justice",
+    "toplumsaladalettext": "Our project contributes to social justice by creating an inclusive environment in education and the business world."
+  }
+}

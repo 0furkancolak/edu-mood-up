@@ -1,0 +1,103 @@
+{
+    "LocaleSwitcher": {
+        "switchLocale": "EN"
+    },
+    "Footer": {
+        "ev": "Anasayfa",
+        "contact": "İletişim",
+        "about": "Hakkımızda",
+        "copyright": "Tüm hakları saklıdır"
+    },
+    "Navbar": {
+        "home": "Anasayfa",
+        "contact": "İletişim",
+        "about": "Hakkımızda",
+        "login": "Giriş"
+    },
+    "AboutHome": {
+        "text": "EduMoodUp Nedir?",
+        "description": "EduMoodUp, öğrencilerin duygusal durumlarını emoji tabanlı bir sistemle ölçerek ders verimliliğini artırmayı ve öğrenci-öğretmen iletişimini güçlendirmeyi amaçlayan yenilikçi bir eğitim projesidir. Platform, öğrencilerin günlük duygusal durumlarını ifade etmelerine olanak tanırken, öğretmenlere öğrencilerin duygusal ihtiyaçlarını anlama ve buna göre ders planlarını ayarlama imkanı sunar. Bu sayede öğretmenler, öğrencilerin psikolojik durumlarını dikkate alarak daha etkili bir öğrenme ortamı oluşturabilir ve ders verimliliğini artırabilirler. EduMoodUp, modern eğitimde duygusal zeka ve iletişimin önemini vurgulayarak öğrenci merkezli bir yaklaşımı teşvik etmekte ve geleceğin eğitimine katkıda bulunmaktadır."
+    },
+    "WhatWeAim": {
+        "neyiamaçlıyoruz": "Neyi Amaçlıyoruz",
+        "education": {
+            "text": "Eğitim",
+            "description": "Öğrencilerin duygusal durumlarını anlama ve öğrenme süreçlerini iyileştirme amacıyla eğitimde duygusal zeka ve iletişimin önemini vurgular."
+        },
+        "work": {
+            "text": "Çalışma",
+            "description": "Öğretmenlere öğrencilerin duygusal durumlarını daha iyi anlama ve buna göre ders planlarını ayarlama imkanı sunarak işlerini kolaylaştırır ve ders verimliliğini artırır."
+        },
+        "life": {
+            "text": "Hayat",
+            "description": "Bireylerin günlük yaşamlarında duygusal ihtiyaçlarını anlama ve sağlıklı iletişimi teşvik ederek daha dengeli ve mutlu bir yaşam süreci için destek sağlar."
+        },
+        "world": {
+            "text": "Dünya",
+            "description": "Toplumun her kesiminde duygusal ihtiyaçları anlama ve iletişimi güçlendirme yolunda bir adım olarak dünya genelinde benimsenmeyi hedefler."
+        }
+    },
+    "ContactForHome": {
+        "text": "Bize Ulaşın"
+    },
+    "ContactHero": {
+        "text": "Bize Ulaşın"
+    },
+    "ContactForMe": {
+        "name": "İsim",
+        "email": "E-posta",
+        "message": "Mesajınızı girin",
+        "send": "Gönder"
+    },
+    "RightHS": {
+        "yeniNesilEğitim": "Yeni Nesil Eğitim",
+        "eğitimdePsikoloji": "Eğitimde Psikoloji"
+    },
+    "CarouselHW": {
+        "universite": "Üniversite",
+        "nasıluni": "EduMoodUp`a katılan üniversiteler için, web sitesinde özel bir portal sunuyoruz. Bu portal, üniversitelerin fakültelerini, bölümlerini ve derslerini sisteme eklemelerine olanak tanır. Ayrıca, öğretmenlerini ve öğrencilerini buraya kaydedebilirler. Bu adımlar, üniversitelerin EduMoodUp`ı kolayca kullanmalarını sağlar.",
+        "ogretmen": "Öğretmen",
+        "nasılogretmen": "EduMoodUp, öğretmenlere mobil bir uygulama sunar. Bu uygulama, öğretmenlere kendi arayüzlerinde öğrenci ders programlarına erişme imkanı verir. Ayrıca, derslerin bitiminde öğrencilere bildirim gönderir ve onlardan duygusal durumlarını ifade etmelerini ister. Öğretmenler, öğrencilerin seçimlerini görebilir ve bu bilgileri öğrencilerin psikolojik durumlarını gösteren grafiklerle birlikte analiz edebilir.",
+        "ogrenci": "Öğrenci",
+        "nasılogrenci": "EduMoodUp, öğrencilere de mobil bir uygulama sunar. Bu uygulama, öğrencilere kendi ders programlarına erişme imkanı verir. Ayrıca, derslerin bitiminde öğrencilere bildirim gönderir ve onlardan duygusal durumlarını ifade etmelerini ister. Öğrenciler, bir emoji seçerek duygusal durumlarını belirtebilirler. Bu bilgiler, öğretmenlerin analiz etmesi için kullanılır ve öğrencilerin psikolojik durumları hakkında fikir sahibi olmalarına yardımcı olur."
+    },
+    "HowWork": {
+        "nasılYapacağız": "Nasıl Yapacağız?"
+    },
+    "Results": {
+        "nelerYaptık": "Neler Yaptık?",
+        "okul": "Okul",
+        "öğrenci": "Öğrenci",
+        "öğretmen": "Öğretmen",
+        "ders": "Ders"
+    },
+    "ResultsCard": {
+        "psikolojiölçtük": "Psikoloji ölçüp derslerin verimini arttırdık"
+    },
+    "Error": {
+        "sayfayok": "Böyle bir sayfa yok",
+        "sicde": "Sizin için çalışmalarıma devam ediyoruz..."
+    },
+    "AboutExtra": {
+        "duygusalzeka": "Duygusal Zeka",
+        "duygusalzekatext": "EduMoodUp, kapsayıcı ve eşitlikçi bir eğitim ortamı sağlayarak, öğrencilerin farklı duygusal ihtiyaçlarına ve öğrenme stillerine saygı duyar.",
+        "erisilebilirogrenim": "Erişilebilir Öğrenim",
+        "erisilebilirogrenimtext": "Projemiz, herkes için yaşam boyu öğrenim fırsatlarını teşvik ederek, eğitimde sürekli gelişimi destekler ve öğrenmeyi herkes için erişilebilir kılar.",
+        "isteesitlik": "İşte Eşitlik",
+        "isteesitliktext": "Sürdürülebilir, kapsayıcı ve sürdürülebilir ekonomik büyümeyi desteklemek adına, EduMoodUp, eğitimdeki eşitsizlikleri azaltarak toplumsal ve ekonomik kalkınmayı destekler.",
+        "ishayatindaesitlik": "İş Hayatında Eşitlik",
+        "ishayatindaesitliktext": "Projemiz, tam ve verimli istihdamı teşvik ederken, öğrencilerin duygusal zekasını geliştirerek iş hayatında başarılı olmalarını sağlar.",
+        "geleceginisgucu": "Geleceğin İş Gücü",
+        "geleceginisgucutext": "Herkes için eşit işi teşvik eden EduMoodUp, duygusal zeka ve iletişim becerilerini güçlendirerek iş yerinde çeşitliliği ve kapsayıcılığı destekler.",
+        "adilisdunyasi": "Adil İş Dünyası",
+        "adilisdunyasietext": "EduMoodUp, sürdürülebilir ekonomik büyümenin bir parçası olarak, öğrencilerin duygusal ihtiyaçlarına odaklanarak geleceğin iş gücünü hazırlar.",
+        "duygusalzekavekariyer": "Duygusal Zeka ve Kariyer",
+        "duygusalzekavekariyeretext": "Projemiz, eğitimdeki fırsat eşitsizliklerini azaltarak herkes için daha adil bir iş dünyası oluşturmayı hedefler.",
+        "degisimeuyum": "Değişime Uyum",
+        "degisimeuyumtext": "Sürdürülebilir, kapsayıcı ve sürdürülebilir ekonomik büyümeyi teşvik eden EduMoodUp, öğrencileri duygusal zeka ile donatarak iş dünyasındaki değişime uyum sağlamalarını destekler.",
+        "cesitlilikteguc": "Çeşitlilikte Güç",
+        "cesitliliktegucetext": "EduMoodUp, eğitimde ve iş dünyasında çeşitliliği teşvik ederek, herkesin potansiyelini maksimum düzeyde kullanmasına yardımcı olur.",
+        "toplumsaladalet": "Toplumsal Adalet",
+        "toplumsaladalettext": "Projemiz, eğitim ve iş dünyasında kapsayıcı bir ortam oluşturarak toplumsal adaletin sağlanmasına katkıda bulunur."
+    }
+}
