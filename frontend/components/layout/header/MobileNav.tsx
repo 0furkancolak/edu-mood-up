@@ -1,54 +1,42 @@
 "use client";
-import React, { useState } from "react";
-import { IoClose } from "react-icons/io5";
+import React from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { motion } from "framer-motion";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import LanguageSwitcher from "@/components/lang/LanguageSwitcher";
 import { Link } from "@/i18n/routing";
+import { useAuthContext } from "@/context/auth-provider";
+import UserProfile from "./UserProfile";
+import { useTranslations } from "next-intl";
 
 export default function MobileNav({ links, scrolled }: any) {
-  const [active, setActive] = useState(false);
-  const clickHandle = () => {
-    setActive(!active);
-  };
+  const t = useTranslations("Layout");
+  const { user } = useAuthContext();
   return (
-    <div className="flex md:hidden items-center justify-center gap-5">
-      <div onClick={clickHandle} className="z-50">
-        {active ? (
-          <IoClose size={32} className="z-50 text-white" />
-        ) : (
-          <HiMenuAlt3 size={28} className="text-white" />
-        )}
-      </div>
+    <Sheet>
 
-      {active ? (
-        <motion.div
-          initial={{ opacity: 0, translateY: -100 }}
-          animate={{ opacity: 1, translateY: 0 }}
-          className="z-40 absolute top-0 left-0 h-screen w-screen flex items-center justify-center flex-col bg-gray-800 "
-        >
-          <div
-            onClick={clickHandle}
-            className="flex flex-col gap-3 h-screen w-screen items-center justify-center "
-          >
-            {links.map((link: any) => (
-              <Link
-                className={`
-                  font-bold text-2xl py-4 min-w-[50%] flex items-center justify-center rounded-lg shadow-sm shadow-white
-                 
-                  `}
-                href={link.url}
-                key={link.id}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <div className="fixed bottom-10 flex gap-3">
-              <LanguageSwitcher />
-            </div>
-          </div>
-        </motion.div>
-      ) : null}
-    </div>
+      <SheetTrigger className="md:hidden">
+        <HiMenuAlt3 size={28} className="text-white" />
+      </SheetTrigger>
+
+      <SheetContent side="right" className="p-4 pt-14 flex flex-col gap-2">
+
+        {links.map((link: any) => (
+          <SheetClose key={link.id} asChild>
+            <Link
+              className="px-2 py-1.5 rounded-lg hover:bg-gray-200"
+              href={link.url}
+            >
+              {link.name}
+            </Link>
+          </SheetClose>
+        ))}
+
+        <div className="fixed bottom-10 flex items-center justify-between gap-3 w-full max-w-56">
+          <LanguageSwitcher />
+          {user ? <UserProfile /> : <SheetClose asChild><Link href="/login">{t("login")}</Link></SheetClose>}
+        </div>
+
+      </SheetContent>
+    </Sheet>
   );
 }

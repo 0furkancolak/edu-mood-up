@@ -9,9 +9,7 @@ type UserType = {
   isEmailVerified: boolean;
   createdAt: Date;
   updatedAt: Date;
-  userPreferences: {
-    enable2FA: boolean;
-  };
+  image: string;
 };
 
 type AuthContextType = {

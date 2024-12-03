@@ -27,10 +27,10 @@ export default function ContactHero() {
         <div className="flex-1 md:p-16 p-8 rounded-lg bg-gradient-to-r from-transparent  to-white">
           <h1 className="font-bold text-4xl mb-6">{t("text")}</h1>
           <Motion
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.8 }}
+            transition={{ delay: 0.2 }}
           >
             <ContactForMe />
           </Motion>

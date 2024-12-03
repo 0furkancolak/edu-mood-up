@@ -1,4 +1,7 @@
 {
+  "Layout": {
+    "login": "Login"
+  },
   "LocaleSwitcher": {
     "switchLocale": "TR"
   },

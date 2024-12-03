@@ -15,8 +15,8 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "EduMoodUp - Next Generation Education",
-  description: "EduMoodUp - Next Generation Education Platform for everyone",
+  title: "EduMoodUp | Next Generation Education",
+  description: "EduMoodUp | Next Generation Education Platform for everyone",
 };
 
 export default async function RootLayout({

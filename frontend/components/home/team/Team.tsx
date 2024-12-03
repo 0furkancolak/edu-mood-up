@@ -27,7 +27,7 @@ export default function Team() {
     <div className="w-full min-h-screen bg-cyan-600">
       <div className="min-h-screen flex flex-col items-center py-8 justify-center gap-6 mx-auto max-w-6xl lg:max-w-7xl w-full">
         <h1 className="font-bold text-5xl text-white mb-8">{t("title")}</h1>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center flex-wrap gap-4">
           {team.map((t) => (
             <Member key={t.id} member={t} />
           ))}

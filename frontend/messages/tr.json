@@ -1,4 +1,7 @@
 {
+    "Layout": {
+        "login": "Giriş"
+    },
     "LocaleSwitcher": {
         "switchLocale": "EN"
     },

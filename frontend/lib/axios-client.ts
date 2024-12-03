@@ -8,7 +8,7 @@ const options = {
 
 const API = axios.create(options);
 
-export const APIRefresh = axios.create(options);
+export const APIRefresh = axios.create(options); 
 APIRefresh.interceptors.response.use((response) => response);
 
 API.interceptors.response.use(
@@ -23,7 +23,7 @@ API.interceptors.response.use(
         await APIRefresh.get("/auth/refresh");
         return APIRefresh(error.config);
       } catch (error) {
-        window.location.href = "/";
+        console.log(error);
       }
     }
     return Promise.reject({
