@@ -31,14 +31,20 @@ export class SessionService {
         id: sessionId,
       },
       include: {
-        user: true,
+        user: {
+          select: {
+            id: true,
+            email: true,
+            name: true,
+          },
+        },
       },
     });
 
     if (!session) {
       throw new NotFoundException("Session not found");
     }
-    const { userId: user } = session;
+    const { user } = session;
 
     return {
       user,
