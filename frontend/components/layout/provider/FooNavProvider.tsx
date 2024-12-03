@@ -9,6 +9,8 @@ export default function FooNavProvider({ children }: { children: React.ReactNode
     useEffect(() => {
         if (path.split("/")[1] == "dashboard") {
             setVisible(false);
+        } else {
+            setVisible(true);
         }
     }, [path]);
 
