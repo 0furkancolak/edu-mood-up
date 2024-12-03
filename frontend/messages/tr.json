@@ -59,11 +59,11 @@
     },
     "CarouselHW": {
         "universite": "Üniversite",
-        "nasıluni": "EduMoodUp`a katılan üniversiteler için, web sitesinde özel bir portal sunuyoruz. Bu portal, üniversitelerin fakültelerini, bölümlerini ve derslerini sisteme eklemelerine olanak tanır. Ayrıca, öğretmenlerini ve öğrencilerini buraya kaydedebilirler. Bu adımlar, üniversitelerin EduMoodUp`ı kolayca kullanmalarını sağlar.",
+        "nasıluni": "EduMoodUp’a katılan üniversiteler için, web sitesinde özel bir portal sunuyoruz. Bu portal, üniversitelerin fakültelerini, bölümlerini ve derslerini sisteme eklemelerine olanak tanır. Ayrıca, öğretmenlerini ve öğrencilerini buraya kaydedebilirler. Bu adımlar, üniversitelerin EduMoodUp’ı kolayca kullanmalarını sağlar.",
         "ogretmen": "Öğretmen",
-        "nasılogretmen": "EduMoodUp, öğretmenlere mobil bir uygulama sunar. Bu uygulama, öğretmenlere kendi arayüzlerinde öğrenci ders programlarına erişme imkanı verir. Ayrıca, derslerin bitiminde öğrencilere bildirim gönderir ve onlardan duygusal durumlarını ifade etmelerini ister. Öğretmenler, öğrencilerin seçimlerini görebilir ve bu bilgileri öğrencilerin psikolojik durumlarını gösteren grafiklerle birlikte analiz edebilir.",
+        "nasılogretmen": "EduMoodUp, öğretmenlere özel bir web arayüzü sunar. Bu arayüz, öğretmenlere kendi öğrenci ders programlarına erişim imkanı verir. Ayrıca, derslerin bitiminde öğrencilere bildirim gönderir ve onlardan duygusal durumlarını ifade etmelerini ister. Öğretmenler, öğrencilerin seçimlerini görebilir ve bu bilgileri öğrencilerin psikolojik durumlarını gösteren grafiklerle birlikte analiz edebilir.",
         "ogrenci": "Öğrenci",
-        "nasılogrenci": "EduMoodUp, öğrencilere de mobil bir uygulama sunar. Bu uygulama, öğrencilere kendi ders programlarına erişme imkanı verir. Ayrıca, derslerin bitiminde öğrencilere bildirim gönderir ve onlardan duygusal durumlarını ifade etmelerini ister. Öğrenciler, bir emoji seçerek duygusal durumlarını belirtebilirler. Bu bilgiler, öğretmenlerin analiz etmesi için kullanılır ve öğrencilerin psikolojik durumları hakkında fikir sahibi olmalarına yardımcı olur."
+        "nasılogrenci": "EduMoodUp, öğrencilere özel bir web arayüzü sunar. Bu arayüz, öğrencilere kendi ders programlarına erişim imkanı verir. Ayrıca, derslerin bitiminde öğrencilere bildirim gönderir ve onlardan duygusal durumlarını ifade etmelerini ister. Öğrenciler, bir emoji seçerek duygusal durumlarını belirtebilirler. Bu bilgiler, öğretmenlerin analiz etmesi için kullanılır ve öğrencilerin psikolojik durumları hakkında fikir sahibi olmalarına yardımcı olur."
     },
     "HowWork": {
         "nasılYapacağız": "Nasıl Yapacağız?"

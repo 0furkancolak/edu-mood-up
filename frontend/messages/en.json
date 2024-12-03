@@ -59,11 +59,11 @@
   },
   "CarouselHW": {
     "universite": "University",
-    "nasıluni": "For universities joining EduMoodUp, we offer a special portal on the website. This portal allows universities to add their faculties, departments, and courses to the system. Additionally, they can register their teachers and students here. These steps enable universities to easily use EduMoodUp.",
+    "nasıluni": "For universities participating in EduMoodUp, we offer a dedicated portal on the website. This portal allows universities to add their faculties, departments, and courses to the system. Additionally, they can register their teachers and students here. These steps make it easy for universities to use EduMoodUp.",
     "ogretmen": "Teacher",
-    "nasılogretmen": "EduMoodUp provides a mobile application for teachers. This application allows teachers to access student class schedules on their interface. Additionally, it sends notifications to students at the end of the lessons and asks them to express their emotional states. Teachers can view students' selections and analyze this information along with graphs showing students' psychological states.",
+    "nasılogretmen": "EduMoodUp provides teachers with a dedicated web interface. This interface allows teachers to access their students' course schedules. Additionally, at the end of classes, it sends notifications to students and asks them to express their emotional states. Teachers can view students' selections and analyze this information along with graphs showing the students' psychological states.",
     "ogrenci": "Student",
-    "nasılogrenci": "EduMoodUp also offers a mobile application for students. This application allows students to access their class schedules. Additionally, it sends notifications to students at the end of the lessons and asks them to express their emotional states. Students can indicate their emotional states by selecting an emoji. This information is used by teachers for analysis and helps students gain insights into their psychological states."
+    "nasılogrenci": "EduMoodUp offers students a dedicated web interface. This interface allows students to access their course schedules. Additionally, at the end of classes, it sends notifications to students and asks them to express their emotional states. Students can select an emoji to indicate their emotional state. This information is used by teachers for analysis and helps in understanding the students' psychological conditions."
   },
   "HowWork": {
     "nasılYapacağız": "How Will We Do It?"
