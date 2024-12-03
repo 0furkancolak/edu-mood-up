@@ -5,6 +5,7 @@ import {
     Bell,
     ChevronsUpDown,
     CreditCard,
+    Loader,
     LogOut,
     Sparkles,
 } from "lucide-react"
@@ -29,17 +30,39 @@ import {
     SidebarMenuItem,
     useSidebar,
 } from "@/components/ui/sidebar"
+import { UserDTO } from "@/types"
+import { logoutMutationFn } from "@/lib/api"
+import { toast } from "@/hooks/use-toast"
+import { useCallback } from "react"
+import { useMutation } from "@tanstack/react-query"
+import { useRouter } from "next/navigation"
 
 export function NavUser({
     user,
 }: {
-    user: {
-        name: string
-        email: string
-        avatar: string
-    }
+    user: UserDTO | any
 }) {
     const { isMobile } = useSidebar()
+    const router = useRouter()
+
+    const { mutate, isPending } = useMutation({
+        mutationFn: logoutMutationFn,
+        onSuccess: () => {
+            router.replace("/");
+        },
+        onError: (error) => {
+            toast({
+                title: "Error",
+                description: error.message,
+                variant: "destructive",
+            });
+        },
+    });
+
+    const handleLogout = useCallback(() => {
+        mutate();
+    }, []);
+
 
     return (
         <SidebarMenu>
@@ -51,12 +74,12 @@ export function NavUser({
                             className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                         >
                             <Avatar className="h-8 w-8 rounded-lg">
-                                <AvatarImage src={user.avatar} alt={user.name} />
-                                <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                                <AvatarImage src={user?.image} alt={user?.name} />
+                                <AvatarFallback className="rounded-lg">EU</AvatarFallback>
                             </Avatar>
                             <div className="grid flex-1 text-left text-sm leading-tight">
-                                <span className="truncate font-semibold">{user.name}</span>
-                                <span className="truncate text-xs">{user.email}</span>
+                                <span className="truncate font-semibold">{user?.name}</span>
+                                <span className="truncate text-xs">{user?.email}</span>
                             </div>
                             <ChevronsUpDown className="ml-auto size-4" />
                         </SidebarMenuButton>
@@ -70,22 +93,15 @@ export function NavUser({
                         <DropdownMenuLabel className="p-0 font-normal">
                             <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                                 <Avatar className="h-8 w-8 rounded-lg">
-                                    <AvatarImage src={user.avatar} alt={user.name} />
-                                    <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                                    <AvatarImage src={user?.image} alt={user?.name} />
+                                    <AvatarFallback className="rounded-lg">EU</AvatarFallback>
                                 </Avatar>
                                 <div className="grid flex-1 text-left text-sm leading-tight">
-                                    <span className="truncate font-semibold">{user.name}</span>
-                                    <span className="truncate text-xs">{user.email}</span>
+                                    <span className="truncate font-semibold">{user?.name}</span>
+                                    <span className="truncate text-xs">{user?.email}</span>
                                 </div>
                             </div>
                         </DropdownMenuLabel>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuGroup>
-                            <DropdownMenuItem>
-                                <Sparkles />
-                                Upgrade to Pro
-                            </DropdownMenuItem>
-                        </DropdownMenuGroup>
                         <DropdownMenuSeparator />
                         <DropdownMenuGroup>
                             <DropdownMenuItem>
@@ -102,8 +118,8 @@ export function NavUser({
                             </DropdownMenuItem>
                         </DropdownMenuGroup>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem>
-                            <LogOut />
+                        <DropdownMenuItem disabled={isPending} onClick={handleLogout}>
+                            {isPending && <Loader className="animate-spin" />}
                             Log out
                         </DropdownMenuItem>
                     </DropdownMenuContent>

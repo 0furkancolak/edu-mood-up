@@ -54,11 +54,11 @@ export default function UserProfile() {
       <PopoverContent align="end" className="max-w-52">
         <div className="flex flex-col gap-2">
           <h2 className="text-sm text-zinc-600 font-semibold">Hi! {user?.name}</h2>
-          <Button variant="outline" onClick={() => router.push("/dashboard")}>
+          <Button className='!py-1 h-8' variant="outline" onClick={() => router.push("/dashboard")}>
             <LayoutDashboard />
             Dashboard
           </Button>
-          <Button variant="outline" onClick={handleLogout} disabled={isPending}>
+          <Button className='!py-1 h-8' variant="outline" onClick={handleLogout} disabled={isPending}>
             {isPending && <Loader className="animate-spin" />}
             Logout
           </Button>
