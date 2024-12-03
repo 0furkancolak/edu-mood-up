@@ -25,7 +25,7 @@ export default function AboutHome({ bg }: any) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.25 }}
-            className="rounded-lg bg-white w-full md:w-[50%] px-5 md:px-10 py-10 min-h-unit-7xl "
+            className="rounded-lg bg-white w-full md:w-[50%] px-5 md:px-10 py-10 min-h-[20rem] "
           >
             <p>{t("description")}</p>
           </Motion>
@@ -34,7 +34,7 @@ export default function AboutHome({ bg }: any) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="rounded-lg relative bg-white w-full md:w-[50%] px-5 md:px-6 py-4 min-h-unit-7xl "
+            className="rounded-lg relative bg-white w-full md:w-[50%] px-5 md:px-6 py-4 min-h-[20rem] "
           >
             <Image
               alt=""

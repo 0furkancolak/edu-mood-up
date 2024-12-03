@@ -6,7 +6,11 @@
         "ev": "Anasayfa",
         "contact": "İletişim",
         "about": "Hakkımızda",
-        "copyright": "Tüm hakları saklıdır"
+        "copyright": "Tüm hakları saklıdır",
+        "policies": {
+            "privacyPolicy": "Gizlilik Politikası",
+            "termsOfService": "Kullanım Koşulları"
+        }
     },
     "Navbar": {
         "home": "Anasayfa",
@@ -99,5 +103,124 @@
         "cesitliliktegucetext": "EduMoodUp, eğitimde ve iş dünyasında çeşitliliği teşvik ederek, herkesin potansiyelini maksimum düzeyde kullanmasına yardımcı olur.",
         "toplumsaladalet": "Toplumsal Adalet",
         "toplumsaladalettext": "Projemiz, eğitim ve iş dünyasında kapsayıcı bir ortam oluşturarak toplumsal adaletin sağlanmasına katkıda bulunur."
+    },
+    "policies": {
+        "privacyPolicy": {
+            "title": "Gizlilik Politikası",
+            "intro": {
+                "title": "1. Giriş",
+                "content": "EduMoodUp olarak, kullanıcılarımızın gizliliğine büyük önem veriyoruz. Bu Gizlilik Politikası, kişisel bilgilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklamaktadır."
+            }
+        },
+        "termsOfService": {
+            "title": "Kullanım Koşulları",
+            "intro": {
+                "title": "1. Giriş",
+                "content": "EduMoodUp'ı kullanarak aşağıdaki kullanım koşullarını kabul etmiş olursunuz."
+            }
+        },
+        "cookieConsent": {
+            "title": "Çerez Kullanıyoruz!",
+            "message": "Bu web sitesi deneyiminizi geliştirmek için çerezler kullanmaktadır.",
+            "accept": "Kabul Et",
+            "decline": "Reddet",
+            "learnMore": "Daha Fazla Bilgi"
+        }
+    },
+    "terms": {
+        "title": "Kullanım Koşulları",
+        "introduction": {
+            "title": "1. Giriş",
+            "content": "Bu Kullanım Koşulları, EduMoodUp platformunu kullanımınızı düzenleyen kuralları ve şartları içermektedir."
+        },
+        "account": {
+            "title": "2. Hesap Oluşturma",
+            "content": "Platform üzerinde hesap oluştururken:",
+            "rules": {
+                "accurate": "Doğru ve güncel bilgiler sağlamalısınız",
+                "security": "Hesap güvenliğinizi korumalısınız",
+                "privacy": "Hesap bilgilerinizi başkalarıyla paylaşmamalısınız"
+            }
+        },
+        "usage": {
+            "title": "3. Kullanım Kuralları",
+            "content": "Platform üzerinde:",
+            "rules": {
+                "legal": "Yasalara uygun davranmalısınız",
+                "respect": "Diğer kullanıcılara saygılı olmalısınız",
+                "security": "Platform güvenliğini tehlikeye atmamalısınız",
+                "spam": "İzinsiz reklam veya spam yapmamalısınız"
+            }
+        },
+        "content": {
+            "title": "4. İçerik Politikası",
+            "content": "Platformda paylaşılan tüm içerikler:",
+            "rules": {
+                "copyright": "Telif haklarına uygun olmalıdır",
+                "harmful": "Zararlı veya yasadışı olmamalıdır",
+                "misleading": "Yanıltıcı bilgiler içermemelidir"
+            }
+        },
+        "changes": {
+            "title": "5. Hizmet Değişiklikleri",
+            "content": "EduMoodUp, herhangi bir zamanda hizmetlerinde değişiklik yapma, ücretlendirme politikasını güncelleme veya hizmeti sonlandırma hakkını saklı tutar."
+        },
+        "disclaimer": {
+            "title": "6. Sorumluluk Reddi",
+            "content": "Platform \"olduğu gibi\" sunulmaktadır ve kesintisiz hizmet garantisi verilmemektedir. Platformun kullanımından doğabilecek zararlardan EduMoodUp sorumlu tutulamaz."
+        },
+        "contact": {
+            "title": "7. İletişim",
+            "content": "Bu koşullarla ilgili sorularınız için info@edumoodup.com adresinden bizimle iletişime geçebilirsiniz."
+        }
+    },
+    "privacy": {
+        "title": "Gizlilik Politikası",
+        "introduction": {
+            "title": "1. Giriş",
+            "content": "EduMoodUp olarak, kullanıcılarımızın gizliliğine büyük önem veriyoruz. Bu Gizlilik Politikası, kişisel bilgilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklamaktadır."
+        },
+        "collectedInformation": {
+            "title": "2. Toplanan Bilgiler",
+            "content": "Aşağıdaki türde bilgileri topluyoruz:",
+            "items": {
+                "personalInformation": "Kişisel bilgiler (isim, e-posta vb.)",
+                "browser": "Tarayıcı ve cihaz bilgileri",
+                "usageData": "Kullanım verileri ve analitikler"
+            }
+        },
+        "usedInformation": {
+            "title": "3. Bilgilerinizi Nasıl Kullanıyoruz",
+            "content": "Bilgilerinizi aşağıdaki amaçlarla kullanıyoruz:",
+            "items": {
+                "provideServices": "Hizmetlerimizi sağlamak ve sürdürmek için",
+                "improveExperience": "Kullanıcı deneyimini iyileştirmek için",
+                "contact": "Gerektiğinde sizinle iletişime geçmek için",
+                "marketing": "İzninizle pazarlama amaçları için"
+            }
+        },
+        "sharedInformation": {
+            "title": "4. Bilgi Paylaşımı",
+            "content": "Kişisel bilgilerinizi üçüncü taraflarla satmıyoruz. Bilgilerinizi yalnızca platformumuzu işletmemize yardımcı olan servis sağlayıcılarla paylaşabiliriz."
+        },
+        "dataSecurity": {
+            "title": "5. Veri Güvenliği",
+            "content": "Kişisel bilgilerinizi yetkisiz erişim, değiştirme veya ifşaya karşı korumak için uygun güvenlik önlemleri uyguluyoruz."
+        },
+        "cookies": {
+            "title": "6. Çerezler",
+            "content": "Gezinme deneyiminizi geliştirmek için çerezler kullanıyoruz. Çerez ayarlarını tarayıcı tercihlerinizden kontrol edebilirsiniz."
+        },
+        "changes": {
+            "title": "7. Gizlilik Politikası Değişiklikleri",
+            "content": "Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Değişikliklerden, yeni politikayı bu sayfada yayınlayarak sizi haberdar edeceğiz."
+        },
+        "contact": {
+            "title": "8. Bize Ulaşın",
+            "content": "Bu gizlilik politikası hakkında sorularınız varsa, lütfen info@edumoodup.com adresinden bizimle iletişime geçin."
+        }
+    },
+    "Team": {
+        "title": "Takım"
     }
 }

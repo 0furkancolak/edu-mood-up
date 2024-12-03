@@ -70,14 +70,14 @@ export default function AboutExtra() {
     },
   ];
   return (
-    <div className="bg-lime-100 w-full md:h-screen min-h-screen">
-      <div className="flex flex-col px-0 py-4 md:py-0 md:flex-row gap-6 md:gap-0 max-w-6xl w-full h-full items-center justify-center">
+    <div className="bg-lime-100 w-full md:h-screen min-h-screen p-5 md:p-0 overflow-hidden">
+      <div className="flex flex-col md:flex-row gap-10 items-center justify-evenly h-full">
         <Motion
           initial={{ opacity: 0, y: +100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
-          className="relative mx-auto flex items-center w-full justify-center"
+          className=""
         >
           <NewDesingSlider vals={vals1} />
         </Motion>
@@ -86,7 +86,7 @@ export default function AboutExtra() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="relative mx-auto"
+          className=""
         >
           <NewDesingSlider vals={vals2} />
         </Motion>

@@ -72,7 +72,7 @@ export default function Login() {
         </h1>
         <p className="mb-8 text-center sm:text-left text-base dark:text-slate-500 font-normal">
           Don&apos;t have an account?{" "}
-          <Link className="text-primary" href="/signup">
+          <Link className="text-gray-950 font-semibold hover:underline" href="/signup">
             Sign up
           </Link>
           .
@@ -115,7 +115,7 @@ export default function Login() {
             </div>
             <div className="mb-4 flex w-full items-center justify-end">
               <Link
-                className="text-sm dark:text-white"
+                className="text-sm text-gray-950 font-semibold hover:underline"
                 href={`/forgot-password?email=${form.getValues().email}`}
               >
                 Forgot your password?
@@ -134,13 +134,13 @@ export default function Login() {
         </Form>
         <p className="text-xs dark:text-slate-500 font-normal mt-4">
           By signing in, you agree to our{" "}
-          <a className="text-primary hover:underline" href="#">
+          <Link className="text-gray-950 font-semibold hover:underline" href="/terms-of-service">
             Terms of Service
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a className="text-primary hover:underline" href="#">
+          <Link className="text-gray-950 font-semibold hover:underline" href="/privacy-policy">
             Privacy Policy
-          </a>
+          </Link>
           .
         </p>
       </div>

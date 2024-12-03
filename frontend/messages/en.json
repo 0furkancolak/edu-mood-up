@@ -6,7 +6,11 @@
     "ev": "Home",
     "contact": "Contact",
     "about": "About Us",
-    "copyright": "All rights reserved"
+    "copyright": "All rights reserved",
+    "policies": {
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service"
+    }
   },
   "Navbar": {
     "home": "Home",
@@ -99,5 +103,124 @@
     "cesitliliktegucetext": "EduMoodUp helps everyone reach their full potential by promoting diversity in education and the business world.",
     "toplumsaladalet": "Social Justice",
     "toplumsaladalettext": "Our project contributes to social justice by creating an inclusive environment in education and the business world."
+  },
+  "policies": {
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "intro": {
+        "title": "1. Introduction",
+        "content": "At EduMoodUp, we highly value your privacy. This Privacy Policy explains how your personal information is collected, used, and protected."
+      }
+    },
+    "termsOfService": {
+      "title": "Terms of Service",
+      "intro": {
+        "title": "1. Introduction",
+        "content": "By using EduMoodUp, you agree to the following terms of service."
+      }
+    },
+    "cookieConsent": {
+      "title": "Cookie Consent!",
+      "message": "This website uses cookies to enhance your experience.",
+      "accept": "Accept",
+      "decline": "Decline",
+      "learnMore": "Learn More"
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "introduction": {
+      "title": "1. Introduction",
+      "content": "These Terms of Service contain the rules and conditions governing your use of the EduMoodUp platform."
+    },
+    "account": {
+      "title": "2. Account Creation",
+      "content": "When creating an account on the platform:",
+      "rules": {
+        "accurate": "You must provide accurate and current information",
+        "security": "You must maintain account security",
+        "privacy": "You must not share your account information with others"
+      }
+    },
+    "usage": {
+      "title": "3. Usage Rules",
+      "content": "On the platform:",
+      "rules": {
+        "legal": "You must comply with laws",
+        "respect": "You must respect other users",
+        "security": "You must not compromise platform security",
+        "spam": "You must not post unauthorized advertisements or spam"
+      }
+    },
+    "content": {
+      "title": "4. Content Policy",
+      "content": "All content shared on the platform:",
+      "rules": {
+        "copyright": "Must comply with copyright laws",
+        "harmful": "Must not be harmful or illegal",
+        "misleading": "Must not contain misleading information"
+      }
+    },
+    "changes": {
+      "title": "5. Service Changes",
+      "content": "EduMoodUp reserves the right to modify its services, update pricing policies, or terminate the service at any time."
+    },
+    "disclaimer": {
+      "title": "6. Disclaimer",
+      "content": "The platform is provided \"as is\" and no continuous service guarantee is provided. EduMoodUp cannot be held responsible for any damages arising from the use of the platform."
+    },
+    "contact": {
+      "title": "7. Contact",
+      "content": "For questions about these terms, you can contact us at info@edumoodup.com"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "introduction": {
+      "title": "1. Introduction",
+      "content": "At EduMoodUp, we place great importance on the privacy of our users. This Privacy Policy explains how your personal information is collected, used, and protected."
+    },
+    "collectedInformation": {
+      "title": "2. Collected Information",
+      "content": "We collect the following types of information:",
+      "items": {
+        "personalInformation": "Personal information (name, email, etc.)",
+        "browser": "Browser and device information",
+        "usageData": "Usage data and analytics"
+      }
+    },
+    "usedInformation": {
+      "title": "3. How We Use Your Information",
+      "content": "We use your information for the following purposes:",
+      "items": {
+        "provideServices": "To provide and maintain our services",
+        "improveExperience": "To improve user experience",
+        "contact": "To contact you when necessary",
+        "marketing": "For marketing purposes with your consent"
+      }
+    },
+    "sharedInformation": {
+      "title": "4. Information Sharing",
+      "content": "We do not sell your personal information to third parties. We may only share your information with service providers who help us operate our platform."
+    },
+    "dataSecurity": {
+      "title": "5. Data Security",
+      "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, or disclosure."
+    },
+    "cookies": {
+      "title": "6. Cookies",
+      "content": "We use cookies to enhance your browsing experience. You can control cookie settings in your browser preferences."
+    },
+    "changes": {
+      "title": "7. Privacy Policy Changes",
+      "content": "We may update this privacy policy from time to time. We will inform you of changes by posting the new policy on this page."
+    },
+    "contact": {
+      "title": "8. Contact Us",
+      "content": "If you have any questions about this privacy policy, please contact us at info@edumoodup.com."
+    }
+  },
+  "Team": {
+    "title": "Team"
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import Motion from "../../motion";
 import { Link } from "@/i18n/routing";
 
@@ -32,8 +32,8 @@ export default function Member({ member }: any) {
           className="font-bold text-white bg-zinc-800 transition-colors duration-300 hover:bg-sky-800 px-2 py-2 rounded-lg flex flex-1 items-center justify-center gap-3 "
           href={member.linkedin}
         >
-          <BsLinkedin />
-          Linkedin
+          {!member.social ? <BsLinkedin /> : <BsGithub />}
+          {!member.social ? "Linkedin" : "Github"}
         </Link>
       </div>
     </Motion>

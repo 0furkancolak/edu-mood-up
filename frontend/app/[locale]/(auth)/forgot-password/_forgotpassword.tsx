@@ -110,6 +110,7 @@ export default function ForgotPassword() {
               >
                 {isPending && <Loader className="animate-spin" />}
                 Send reset instructions
+                <ArrowRight />
               </Button>
             </form>
           </Form>
@@ -134,5 +135,5 @@ export default function ForgotPassword() {
         </div>
       )}
     </main>
-  );
+  )
 }

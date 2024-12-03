@@ -85,7 +85,7 @@ export default function SignUp() {
             </h1>
             <p className="mb-6 text-center sm:text-left text-base dark:text-slate-500 font-normal">
               Already have an account?{" "}
-              <Link className="text-primary" href="/">
+              <Link className="text-gray-950 font-semibold hover:underline" href="/login">
                 Sign in
               </Link>
               .
@@ -174,7 +174,7 @@ export default function SignUp() {
                   />
                 </div>
                 <Button
-                  className="w-full text-[15px] h-[40px] !bg-blue-500 text-white font-semibold"
+                  className="w-full text-[15px] h-[40px] text-white font-semibold"
                   disabled={isPending}
                   type="submit"
                 >
@@ -183,18 +183,18 @@ export default function SignUp() {
                   <ArrowRight />
                 </Button>
 
-             
+
               </form>
             </Form>
             <p className="text-xs font-normal mt-4">
               By signing up, you agree to our{" "}
-              <a className="text-primary hover:underline" href="#">
+              <Link className="text-gray-950 font-semibold hover:underline" href="/terms-of-service">
                 Terms of Service
-              </a>{" "}
+              </Link>{" "}
               and{" "}
-              <a className="text-primary hover:underline" href="#">
+              <Link className="text-gray-950 font-semibold hover:underline" href="/privacy-policy">
                 Privacy Policy
-              </a>
+              </Link>
               .
             </p>
           </div>
@@ -209,7 +209,7 @@ export default function SignUp() {
             <p className="mb-2 text-center text-sm text-muted-foreground dark:text-slate-500 font-normal">
               We just sent a verification link to {form.getValues().email}.
             </p>
-            <Link href="/">
+            <Link href="/login">
               <Button className="h-[40px]">
                 Go to login
                 <ArrowRight />

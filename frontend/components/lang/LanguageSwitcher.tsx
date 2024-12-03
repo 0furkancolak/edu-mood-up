@@ -23,7 +23,7 @@ export default function LocaleSwitcher() {
   return (
     <>
       <Link
-        className={`p-1 ${isPending ? "opacity-50" : ""}`}
+        className={`p-1 ${isPending ? "opacity-50" : ""} hover:underline`}
         href={pathname}
         locale={otherLocale}
         onClick={handleLocaleSwitch}

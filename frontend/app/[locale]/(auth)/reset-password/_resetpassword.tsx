@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/layout/logo";
-import { ArrowLeft, Frown, Loader } from "lucide-react";
+import { ArrowLeft, ArrowRight, Frown, Loader } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { resetPasswordMutationFn } from "@/lib/api";
 import { toast } from "@/hooks/use-toast";
@@ -149,6 +149,7 @@ export default function ResetPassword() {
               >
                 {isPending && <Loader className="animate-spin" />}
                 Update password
+                <ArrowRight />
               </Button>
             </form>
           </Form>
@@ -173,5 +174,5 @@ export default function ResetPassword() {
         </div>
       )}
     </main>
-  );
+  )
 }

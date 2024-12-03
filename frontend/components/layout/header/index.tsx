@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { useAuthContext } from "@/context/auth-provider";
 import LogoutDialog from "@/components/auth/LogoutDialog";
-import { Button } from "@/components/ui/button";
+import UserProfile from "./UserProfile";
 
 const dancing = Dancing_Script({
   subsets: ["latin"],
@@ -22,7 +22,7 @@ export default function Navbar() {
   const t = useTranslations("Navbar");
   const [isOpen, setIsOpen] = useState(false);
   const { isLoading, user } = useAuthContext();
-  
+
   const links = [
     {
       id: 1,
@@ -61,18 +61,16 @@ export default function Navbar() {
 
   return (
     <Motion
-      initial={{ opacity: 0, y: +100 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.75 }}
+      delay={0.2}
       className={`fixed top-0 flex inset-x-0 z-50 items-center justify-center `}
     >
       <div
-        className={`${
-          scrolled
-            ? "rounded-2xl shadow-md m-3 py-4 w-[95%] md:w-[75%] bg-gray-800 "
-            : "bg-transparent py-8 w-full container"
-        } 
+        className={`${scrolled
+          ? "rounded-2xl shadow-md m-3 py-4 w-[95%] md:w-[75%] bg-gray-800 "
+          : "bg-transparent py-8 w-full container"
+          } 
         transition-all duration-300 flex justify-between text-white items-center px-8 md:px-0`}
       >
         <Link
@@ -98,11 +96,11 @@ export default function Navbar() {
         </nav>
         <div className="hidden md:flex-1 md:flex items-center gap-5 justify-center">
           {user ? (
-            <Button onClick={() => setIsOpen(true)}>Logout</Button>
+            <UserProfile />
           ) : (
             <Link
               href={`/login`}
-              className="hover:scale-105 transition-all duration-300 hover:ring-1 hover:bg-white hover:text-black ring-white rounded-lg px-3 py-2 "
+              className="hover:underline"
             >
               {t("login")}
             </Link>

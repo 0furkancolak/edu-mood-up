@@ -1,7 +1,6 @@
 import React from "react";
 import RightHS from "./RightHS";
 import LeftHS from "./LeftHS";
-import AppLinks from "./AppLinks";
 import Motion from "../../motion";
 
 export default function HeroSection() {
@@ -12,7 +11,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: +100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }} 
+          transition={{ delay: 0.3 }}
           className="flex w-[70%] md:w-[50%]"
         >
           <LeftHS />
@@ -21,7 +20,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: +100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.85 }}
+          transition={{ delay: 0.4 }}
           className="flex md:w-[50%]"
         >
           <RightHS />
@@ -31,10 +30,9 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.87 }}
+        transition={{ delay: 0.6 }}
         className="flex justify-center w-full"
       >
-        <AppLinks />
       </Motion>
     </div>
   );
