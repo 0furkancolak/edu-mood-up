@@ -63,7 +63,7 @@ export default function Login() {
   };
 
   return (
-    <main className="w-full  h-auto max-w-full">
+    <main className="w-full max-w-full">
       <div className="w-full h-full p-5 rounded-md">
         <Logo />
 
