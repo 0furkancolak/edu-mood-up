@@ -1,13 +1,16 @@
 import { config } from "../config/app.config";
 import nodemailer from "nodemailer";
 
-type Params = {
-  to: string;
+interface EmailOptions {
+  to: string | string[];
   subject: string;
   text: string;
   html: string;
   from?: string;
-};
+  attachments?: any[];
+  cc?: string[];
+  bcc?: string[];
+}
 
 const mailer_sender = `no-reply <${config.MAILER_SENDER}>`;
 
@@ -22,26 +25,31 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export const sendEmail = async ({
-  to,
-  from = mailer_sender,
-  subject,
-  text,
-  html,
-}: Params) => {
-  const info = await transporter.sendMail({
-    from,
-    to: to,
-    subject,
-    text,
-    html,
-  });
-  if (info.messageId) {
+export const sendEmail = async (options: EmailOptions) => {
+  try {
+    const info = await transporter.sendMail({
+      from: options.from || mailer_sender,
+      to: Array.isArray(options.to) ? options.to.join(',') : options.to,
+      cc: options.cc?.join(','),
+      bcc: options.bcc?.join(','),
+      subject: options.subject,
+      text: options.text,
+      html: options.html,
+      attachments: options.attachments
+    });
+
+    if (info.messageId) {
+      return {
+        data: info.messageId,
+      };
+    }
     return {
-      data: info.messageId,
+      error: info.response,
+    };
+  } catch (error: any) {
+    console.error('Email gönderme hatası:', error);
+    return {
+      error: error.message
     };
   }
-  return {
-    error: info.response,
-  };
 };

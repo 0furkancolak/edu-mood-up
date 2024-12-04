@@ -12,6 +12,8 @@ import sessionRoutes from "./modules/session/session.routes";
 import { authenticateJWT } from "./common/strategies/jwt.strategy";
 import db from "./database/db";
 import fileRoutes from "./modules/file/file.routes";
+import { redis } from "./common/utils/redis";
+import { pubSubManager } from "./common/utils/pubsub";
 
 const app = express();
 const BASE_PATH = config.BASE_PATH;
@@ -38,14 +40,31 @@ app.get(
 );
 
 app.use(`${BASE_PATH}/auth`, authRoutes);
-
 app.use(`${BASE_PATH}/session`, authenticateJWT, sessionRoutes);
-
 app.use(`${BASE_PATH}/file`, fileRoutes);
 
 app.use(errorHandler);
 
-app.listen(config.PORT, async () => {
-  console.log(`Server listening on port ${config.PORT} in ${config.NODE_ENV}`);
-  await db.$connect();
-});
+const startServer = async () => {
+  try {
+    await redis.ping();
+    console.log('Redis connection successful');
+
+    await db.$connect();
+    console.log('Database connection successful');
+
+    app.listen(config.PORT, () => {
+      console.log(`Server listening on port ${config.PORT} in ${config.NODE_ENV}`);
+    });
+
+    await pubSubManager.subscribe('system:notifications', (data: any) => {
+      console.log('System notification received:', data);
+    });
+
+  } catch (error) {
+    console.error('Server startup error:', error);
+    process.exit(1);
+  }
+};
+
+startServer();
