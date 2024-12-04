@@ -78,7 +78,7 @@ export class AuthService {
     const verificationUrl = `${config.APP_ORIGIN}/confirm-account?code=${verification.code}`;
     await sendEmail({
       to: newUser.email,
-      ...verifyEmailTemplate(verificationUrl),
+      ...(await verifyEmailTemplate(verificationUrl)),
     });
 
     return {
@@ -279,7 +279,7 @@ export class AuthService {
 
     const { data, error } = await sendEmail({
       to: user.email,
-      ...passwordResetTemplate(resetLink),
+      ...(await passwordResetTemplate("en", resetLink)),
     });
 
     if (!data) {
@@ -292,7 +292,7 @@ export class AuthService {
     };
   }
 
-  public async resePassword({ password, verificationCode }: resetPasswordDto) {
+  public async resetPassword({ password, verificationCode }: resetPasswordDto) {
     const validCode = await db.verificationCode.findFirst({
       where: {
         code: verificationCode,

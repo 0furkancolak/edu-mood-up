@@ -11,6 +11,7 @@ import passport from "./middlewares/passport";
 import sessionRoutes from "./modules/session/session.routes";
 import { authenticateJWT } from "./common/strategies/jwt.strategy";
 import db from "./database/db";
+import fileRoutes from "./modules/file/file.routes";
 
 const app = express();
 const BASE_PATH = config.BASE_PATH;
@@ -39,6 +40,8 @@ app.get(
 app.use(`${BASE_PATH}/auth`, authRoutes);
 
 app.use(`${BASE_PATH}/session`, authenticateJWT, sessionRoutes);
+
+app.use(`${BASE_PATH}/file`, fileRoutes);
 
 app.use(errorHandler);
 

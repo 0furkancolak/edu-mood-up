@@ -12,6 +12,7 @@ type Params = {
 const mailer_sender = `no-reply <${config.MAILER_SENDER}>`;
 
 const transporter = nodemailer.createTransport({
+  service: "gmail",
   host: config.SMTP_HOST,
   port: Number(config.SMTP_PORT),
   secure: config.SMTP_SECURE === "true",

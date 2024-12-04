@@ -70,7 +70,7 @@ export default function ForgotPassword() {
 
           <h1
             className="text-xl tracking-[-0.16px] dark:text-[#fcfdffef] font-bold mb-1.5 mt-8
-        text-center sm:text-left"
+      text-center sm:text-left"
           >
             Reset password
           </h1>
@@ -116,14 +116,14 @@ export default function ForgotPassword() {
           </Form>
         </div>
       ) : (
-        <div className="w-full h-[80vh] flex flex-col gap-2 items-center justify-center rounded-md">
+        <div className="w-full h-96 flex flex-col gap-2 items-center justify-center rounded-md">
           <div className="size-[48px]">
             <MailCheckIcon size="48px" className="animate-bounce" />
           </div>
           <h2 className="text-xl tracking-[-0.16px] dark:text-[#fcfdffef] font-bold">
             Check your email
           </h2>
-          <p className="mb-2 text-center text-sm text-muted-foreground dark:text-[#f1f7feb5] font-normal">
+          <p className="mb-2 text-center px-6 text-sm text-muted-foreground dark:text-[#f1f7feb5] font-normal">
             We just sent a password reset link to {form.getValues().email}.
           </p>
           <Link href="/login">
@@ -135,5 +135,5 @@ export default function ForgotPassword() {
         </div>
       )}
     </main>
-  )
+  );
 }
