@@ -58,7 +58,7 @@ export class AuthService {
         email,
         password,
         userPreferences: {
-          create: {}, 
+          create: {},
         },
       },
       include: {
@@ -192,11 +192,11 @@ export class AuthService {
 
     const newRefreshToken = sessionRequireRefresh
       ? signJwtToken(
-          {
-            sessionId: session.id,
-          },
-          refreshTokenSignOptions
-        )
+        {
+          sessionId: session.id,
+        },
+        refreshTokenSignOptions
+      )
       : undefined;
 
     const accessToken = signJwtToken({
@@ -274,22 +274,21 @@ export class AuthService {
       },
     });
 
-    const resetLink = `${config.APP_ORIGIN}/reset-password?code=${
-      validCode.code
-    }&exp=${expiresAt.getTime()}`;
+    const resetLink = `${config.APP_ORIGIN}/reset-password?code=${validCode.code
+      }&exp=${expiresAt.getTime()}`;
 
     const { data, error } = await sendEmail({
       to: user.email,
       ...passwordResetTemplate(resetLink),
     });
 
-    if (!data?.id) {
-      throw new InternalServerException(`${error?.name} ${error?.message}`);
+    if (!data) {
+      throw new InternalServerException(`${error}`);
     }
 
     return {
       url: resetLink,
-      emailId: data.id,
+      emailId: data,
     };
   }
 

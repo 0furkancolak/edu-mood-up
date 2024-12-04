@@ -1,18 +1,25 @@
 import { config } from "../config/app.config";
-import { resend } from "./resendClient";
+import nodemailer from "nodemailer";
 
 type Params = {
-  to: string | string[];
+  to: string;
   subject: string;
   text: string;
   html: string;
   from?: string;
 };
 
-const mailer_sender =
-  config.NODE_ENV === "development"
-    ? `no-reply <onboarding@resend.dev>`
-    : `no-reply <${config.MAILER_SENDER}>`;
+const mailer_sender = `no-reply <${config.MAILER_SENDER}>`;
+
+const transporter = nodemailer.createTransport({
+  host: config.SMTP_HOST,
+  port: Number(config.SMTP_PORT),
+  secure: config.SMTP_SECURE === "true",
+  auth: {
+    user: config.SMTP_USER,
+    pass: config.SMTP_PASS,
+  },
+});
 
 export const sendEmail = async ({
   to,
@@ -20,11 +27,20 @@ export const sendEmail = async ({
   subject,
   text,
   html,
-}: Params) =>
-  await resend.emails.send({
+}: Params) => {
+  const info = await transporter.sendMail({
     from,
-    to: Array.isArray(to) ? to : [to],
-    text,
+    to: to,
     subject,
+    text,
     html,
   });
+  if (info.messageId) {
+    return {
+      data: info.messageId,
+    };
+  }
+  return {
+    error: info.response,
+  };
+};
