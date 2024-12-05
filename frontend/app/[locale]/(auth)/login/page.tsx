@@ -16,12 +16,10 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/layout/logo";
 import { loginMutationFn } from "@/lib/api";
-import { useRouter } from "next/navigation";
 import { toast } from "@/hooks/use-toast";
 import { Link } from "@/i18n/routing";
 
 export default function Login() {
-  const router = useRouter();
   const { mutate, isPending } = useMutation({
     mutationFn: loginMutationFn,
   });
@@ -47,10 +45,10 @@ export default function Login() {
     mutate(values as any, {
       onSuccess: (response) => {
         if (response.data.mfaRequired) {
-          router.replace(`/verify-mfa?email=${values.email}`);
+          window.location.href = `/verify-mfa?email=${values.email}`;
           return;
         }
-        router.replace(`/dashboard`);
+        window.location.href = `/dashboard`;
       },
       onError: (error) => {
         toast({

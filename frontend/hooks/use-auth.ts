@@ -9,7 +9,11 @@ const useAuth = () => {
     queryFn: getUserSessionQueryFn,
     staleTime: Infinity,
   });
-  return query;
+
+  return {
+    ...query,
+    isAuthenticated: !!query.data && query.isSuccess,
+  };
 };
 
 export default useAuth;

@@ -22,8 +22,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const t = useTranslations("Navbar");
   const [isOpen, setIsOpen] = useState(false);
-  const { isLoading, user } = useAuthContext();
-
+  const { user } = useAuthContext();
+ 
   const links = [
     {
       id: 1,

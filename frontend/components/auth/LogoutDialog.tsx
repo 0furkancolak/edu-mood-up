@@ -11,7 +11,6 @@ import { toast } from "@/hooks/use-toast";
 import { logoutMutationFn } from "@/lib/api";
 import { useMutation } from "@tanstack/react-query";
 import { Loader } from "lucide-react";
-import { useRouter } from "next/navigation";
 import React, { useCallback } from "react";
 
 const LogoutDialog = (props: {
@@ -20,11 +19,10 @@ const LogoutDialog = (props: {
 }) => {
   const { isOpen, setIsOpen } = props;
 
-  const router = useRouter();
   const { mutate, isPending } = useMutation({
     mutationFn: logoutMutationFn,
     onSuccess: () => {
-      router.replace("/");
+      window.location.href = "/";
     },
     onError: (error) => {
       toast({

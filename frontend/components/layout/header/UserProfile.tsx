@@ -21,7 +21,7 @@ export default function UserProfile() {
   const { mutate, isPending } = useMutation({
     mutationFn: logoutMutationFn,
     onSuccess: () => {
-      router.replace("/");
+      window.location.href = "/";
     },
     onError: (error) => {
       toast({
@@ -53,12 +53,12 @@ export default function UserProfile() {
       </PopoverTrigger>
       <PopoverContent align="end" className="max-w-52">
         <div className="flex flex-col gap-2">
-          <h2 className="text-sm text-zinc-600 font-semibold">Hi! {user?.name}</h2>
-          <Button className='!py-1 h-8' variant="outline" onClick={() => router.push("/dashboard")}>
+          <h2 className="text-xs text-gray-600 font-semibold">Hi! {user?.name}</h2>
+          <Button className='!py-1 h-7' variant="outline" onClick={() => router.push("/dashboard")}>
             <LayoutDashboard />
             Dashboard
           </Button>
-          <Button className='!py-1 h-8' variant="outline" onClick={handleLogout} disabled={isPending}>
+          <Button className='!py-1 h-7' variant="outline" onClick={handleLogout} disabled={isPending}>
             {isPending && <Loader className="animate-spin" />}
             Logout
           </Button>

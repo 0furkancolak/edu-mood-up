@@ -17,6 +17,7 @@ type AuthContextType = {
   error: any;
   isLoading: boolean;
   isFetching: boolean;
+  isAuthenticated: boolean;
   refetch: () => void;
 };
 
@@ -25,12 +26,12 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const { data, error, isLoading, isFetching, refetch } = useAuth();
-  const user = data?.data?.user;
+  const { data, error, isLoading, isFetching, refetch, isAuthenticated } = useAuth();
+  const user = data?.data?.user || null;
 
   return (
     <AuthContext.Provider
-      value={{ user, error, isLoading, isFetching, refetch }}
+      value={{ user, error, isLoading, isFetching, refetch, isAuthenticated }}
     >
       {children}
     </AuthContext.Provider>

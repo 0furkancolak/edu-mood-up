@@ -6,8 +6,6 @@ import {
     ChevronsUpDown,
     CreditCard,
     Loader,
-    LogOut,
-    Sparkles,
 } from "lucide-react"
 
 import {
@@ -48,7 +46,7 @@ export function NavUser({
     const { mutate, isPending } = useMutation({
         mutationFn: logoutMutationFn,
         onSuccess: () => {
-            router.replace("/");
+            window.location.href = "/";
         },
         onError: (error) => {
             toast({
@@ -104,15 +102,11 @@ export function NavUser({
                         </DropdownMenuLabel>
                         <DropdownMenuSeparator />
                         <DropdownMenuGroup>
-                            <DropdownMenuItem>
+                            <DropdownMenuItem onClick={() => router.push("/profile")}>
                                 <BadgeCheck />
                                 Account
                             </DropdownMenuItem>
-                            <DropdownMenuItem>
-                                <CreditCard />
-                                Billing
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
+                            <DropdownMenuItem onClick={() => router.push("/notifications")}>
                                 <Bell />
                                 Notifications
                             </DropdownMenuItem>
