@@ -1,7 +1,7 @@
 import { redis } from './redis';
 import { config } from '../../config/app.config';
 
-export class CacheManager {
+class CacheManager {
     private defaultTTL: number;
 
     constructor() {
@@ -101,4 +101,6 @@ export class CacheManager {
     }
 }
 
-export const cacheManager = new CacheManager(); 
+const cacheManager = new CacheManager();
+
+export default cacheManager; 

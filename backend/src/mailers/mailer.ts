@@ -1,5 +1,7 @@
+import { logger } from "../common/utils/logger";
 import { config } from "../config/app.config";
 import nodemailer from "nodemailer";
+import { emailQueue } from "../common/utils/bull";
 
 interface EmailOptions {
   to: string | string[];
@@ -12,7 +14,7 @@ interface EmailOptions {
   bcc?: string[];
 }
 
-const mailer_sender = `no-reply <${config.MAILER_SENDER}>`;
+const mailer_sender = `${config.MAILER_SENDER} <${config.MAILER_SENDER_EMAIL}>`;
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -47,9 +49,14 @@ export const sendEmail = async (options: EmailOptions) => {
       error: info.response,
     };
   } catch (error: any) {
-    console.error('Email gönderme hatası:', error);
+    logger.error('Email sending error:', error);
+    console.error('Email sending error:', error);
     return {
       error: error.message
     };
   }
+};
+
+export const sendEmailWithQueue = async (options: EmailOptions) => {
+  await emailQueue.add(options);
 };

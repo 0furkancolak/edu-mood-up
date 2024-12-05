@@ -1,5 +1,6 @@
 import Redis from 'ioredis';
 import { config } from '../../config/app.config';
+import { logger } from './logger';
 
 export const redis = new Redis({
     host: config.REDIS.HOST,
@@ -8,19 +9,10 @@ export const redis = new Redis({
     db: config.REDIS.DB
 });
 
-export const publisher = redis.duplicate();
-export const subscriber = redis.duplicate();
 
 redis.on('error', (error) => {
+    logger.error('Redis Connection Error:', error);
     console.error('Redis Connection Error:', error);
-});
-
-publisher.on('error', (error) => {
-    console.error('Redis Publisher Error:', error);
-});
-
-subscriber.on('error', (error) => {
-    console.error('Redis Subscriber Error:', error);
 });
 
 redis.on('connect', () => {

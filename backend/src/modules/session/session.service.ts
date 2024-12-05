@@ -1,3 +1,4 @@
+import cacheManager from "../../common/utils/cache";
 import { NotFoundException } from "../../common/utils/catch-errors";
 import db from "../../database/db";
 
@@ -26,6 +27,11 @@ export class SessionService {
   }
 
   public async getSessionById(sessionId: string) {
+    const cachedSession = await cacheManager.get(`session:${sessionId}`);
+
+    if (cachedSession) {
+      return { user: cachedSession };
+    }
     const session = await db.session.findUnique({
       where: {
         id: sessionId,
@@ -36,6 +42,7 @@ export class SessionService {
             id: true,
             email: true,
             name: true,
+            role: true,
           },
         },
       },
@@ -45,6 +52,8 @@ export class SessionService {
       throw new NotFoundException("Session not found");
     }
     const { user } = session;
+
+    await cacheManager.set(`session:${sessionId}`, user, 60 * 60);
 
     return {
       user,

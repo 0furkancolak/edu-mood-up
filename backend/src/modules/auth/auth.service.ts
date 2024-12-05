@@ -8,7 +8,6 @@ import {
 import {
   BadRequestException,
   HttpException,
-  InternalServerException,
   NotFoundException,
   UnauthorizedException,
 } from "../../common/utils/catch-errors";
@@ -27,7 +26,7 @@ import {
   signJwtToken,
   verifyJwtToken,
 } from "../../common/utils/jwt";
-import { sendEmail } from "../../mailers/mailer";
+import { sendEmailWithQueue } from "../../mailers/mailer";
 import {
   passwordResetTemplate,
   verifyEmailTemplate,
@@ -76,7 +75,7 @@ export class AuthService {
     });
 
     const verificationUrl = `${config.APP_ORIGIN}/confirm-account?code=${verification.code}`;
-    await sendEmail({
+    sendEmailWithQueue({
       to: newUser.email,
       ...(await verifyEmailTemplate(verificationUrl)),
     });
@@ -244,7 +243,6 @@ export class AuthService {
       throw new NotFoundException("User not found");
     }
 
-    //check mail rate limit is 2 emails per 3 or 10 min
     const timeAgo = threeMinutesAgo();
     const maxAttempts = 2;
 
@@ -274,21 +272,16 @@ export class AuthService {
       },
     });
 
-    const resetLink = `${config.APP_ORIGIN}/reset-password?code=${validCode.code
+    const resetLink = `${config.CORS_ORIGIN}/reset-password?code=${validCode.code
       }&exp=${expiresAt.getTime()}`;
 
-    const { data, error } = await sendEmail({
+    sendEmailWithQueue({
       to: user.email,
       ...(await passwordResetTemplate("en", resetLink)),
     });
 
-    if (!data) {
-      throw new InternalServerException(`${error}`);
-    }
-
     return {
       url: resetLink,
-      emailId: data,
     };
   }
 
