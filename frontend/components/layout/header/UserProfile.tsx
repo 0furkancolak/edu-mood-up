@@ -2,17 +2,20 @@
 import React, { useCallback } from 'react'
 import Image from "next/image";
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { useAuthContext } from '@/context/auth-provider';
 import { Link, useRouter } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
 import { useMutation } from '@tanstack/react-query';
 import { logoutMutationFn } from '@/lib/api';
-import { LayoutDashboard, Loader } from 'lucide-react';
+import { LayoutDashboard, Loader, LogOut } from 'lucide-react';
 
 export default function UserProfile() {
   const { isLoading, user } = useAuthContext();
@@ -41,8 +44,8 @@ export default function UserProfile() {
   }
 
   return (
-    <Popover>
-      <PopoverTrigger>
+    <DropdownMenu>
+      <DropdownMenuTrigger className="cursor-pointer outline-none">
         <Image
           alt=""
           src={user?.image || "/images/EduMoodUp.jpg"}
@@ -50,20 +53,21 @@ export default function UserProfile() {
           height={40}
           className="rounded-full border-2 border-transparent hover:border-white transition-all duration-300"
         />
-      </PopoverTrigger>
-      <PopoverContent align="end" className="max-w-52">
-        <div className="flex flex-col gap-2">
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-52">
+        <div className="flex flex-col gap-2 p-2 w-full">
           <h2 className="text-xs text-gray-600 font-semibold">Hi! {user?.name}</h2>
-          <Button className='!py-1 h-7' variant="outline" onClick={() => router.push("/dashboard")}>
+          <DropdownMenuItem onClick={() => router.push("/dashboard")} className="flex items-center gap-2 cursor-pointer w-full">
             <LayoutDashboard />
             Dashboard
-          </Button>
-          <Button className='!py-1 h-7' variant="outline" onClick={handleLogout} disabled={isPending}>
-            {isPending && <Loader className="animate-spin" />}
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={handleLogout} className="flex items-center gap-2 cursor-pointer w-full" disabled={isPending}>
+            <LogOut />
             Logout
-          </Button>
+            {isPending && <Loader className="animate-spin" />}
+          </DropdownMenuItem>
         </div>
-      </PopoverContent>
-    </Popover>
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }

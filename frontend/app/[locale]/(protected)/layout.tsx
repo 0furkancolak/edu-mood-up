@@ -8,6 +8,7 @@ import {
     SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { getUser } from '@/lib/auth';
+import { redirect } from 'next/navigation';
 
 export default async function ProtectedLayout({
     children,
@@ -17,6 +18,10 @@ export default async function ProtectedLayout({
     const cookieStore = await cookies()
     const defaultOpen = cookieStore.get("sidebar:state")?.value === "true"
     const user = await getUser();
+
+    if (!user) {
+        redirect("/login")
+    }
 
     return (
         <SidebarProvider defaultOpen={defaultOpen}>

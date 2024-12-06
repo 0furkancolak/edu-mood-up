@@ -1,19 +1,11 @@
 "use client";
 
 import useAuth from "@/hooks/use-auth";
+import { UserDTO } from "@/types";
 import React, { createContext, useContext } from "react";
 
-type UserType = {
-  name: string;
-  email: string;
-  isEmailVerified: boolean;
-  createdAt: Date;
-  updatedAt: Date;
-  image: string;
-};
-
 type AuthContextType = {
-  user?: UserType;
+  user?: UserDTO;
   error: any;
   isLoading: boolean;
   isFetching: boolean;

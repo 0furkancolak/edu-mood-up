@@ -2,10 +2,11 @@ import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
 import { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+import { PROTECTED_ROUTES } from "./lib/const";
 
 const handleI18nRouting = createMiddleware(routing);
 
-const protectedRoutes = ["dashboard"];
+const protectedRoutes = PROTECTED_ROUTES;
 const publicRoutes = [
   "login",
   "signup",

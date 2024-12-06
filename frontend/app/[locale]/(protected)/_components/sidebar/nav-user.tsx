@@ -6,6 +6,7 @@ import {
     ChevronsUpDown,
     CreditCard,
     Loader,
+    Settings,
 } from "lucide-react"
 
 import {
@@ -66,7 +67,7 @@ export function NavUser({
         <SidebarMenu>
             <SidebarMenuItem>
                 <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
+                    <DropdownMenuTrigger className="" asChild>
                         <SidebarMenuButton
                             size="lg"
                             className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
@@ -102,17 +103,21 @@ export function NavUser({
                         </DropdownMenuLabel>
                         <DropdownMenuSeparator />
                         <DropdownMenuGroup>
-                            <DropdownMenuItem onClick={() => router.push("/profile")}>
+                            <DropdownMenuItem className="cursor-pointer" onClick={() => router.push("/user/profile")}>
                                 <BadgeCheck />
                                 Account
                             </DropdownMenuItem>
-                            <DropdownMenuItem onClick={() => router.push("/notifications")}>
+                            <DropdownMenuItem className="cursor-pointer" onClick={() => router.push("/user/notifications")}>
                                 <Bell />
                                 Notifications
                             </DropdownMenuItem>
+                            <DropdownMenuItem className="cursor-pointer" onClick={() => router.push("/user/settings")}>
+                                <Settings />
+                                Settings
+                            </DropdownMenuItem>
                         </DropdownMenuGroup>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem disabled={isPending} onClick={handleLogout}>
+                        <DropdownMenuItem className="cursor-pointer" disabled={isPending} onClick={handleLogout}>
                             {isPending && <Loader className="animate-spin" />}
                             Log out
                         </DropdownMenuItem>

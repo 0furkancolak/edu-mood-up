@@ -6,9 +6,7 @@ const Logo = (props: { url?: string; size?: string; fontSize?: string }) => {
   const { url = "/", size = "40px", fontSize = "24px" } = props;
   return (
     <div
-      className="flex items-center justify-center
-  sm:justify-start
-    "
+      className="flex items-center justify-center sm:justify-start"
     >
       <Link
         href={url}

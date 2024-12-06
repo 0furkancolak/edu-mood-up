@@ -16,7 +16,9 @@ datasource db {
 enum UserRole {
   SUPER_ADMIN
   ADMIN
-  USER
+  UNIVERSITY
+  TEACHER
+  STUDENT
 }
 
 model User {
@@ -25,7 +27,7 @@ model User {
   email           String             @unique
   password        String
   isEmailVerified Boolean            @default(false)
-  role            UserRole           @default(USER)
+  role            UserRole           @default(STUDENT)
   createdAt       DateTime           @default(now())
   updatedAt       DateTime           @updatedAt
   userPreferences UserPreferences?
