@@ -3,7 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/routing";
 import { useTransition } from "react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, HTMLMotionProps } from "framer-motion";
 
 export default function LocaleSwitcher() {
   const t = useTranslations("LocaleSwitcher");
@@ -34,14 +34,14 @@ export default function LocaleSwitcher() {
       <AnimatePresence>
         {isPending && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 z-[99999] flex items-center justify-center"
+            {...({ className: "fixed inset-0 bg-black bg-opacity-50 z-[99999] flex items-center justify-center" } as HTMLMotionProps<"div">)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
             <motion.div
-              className="loader"
+              {...({ className: "loader" } as HTMLMotionProps<"div">)}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
