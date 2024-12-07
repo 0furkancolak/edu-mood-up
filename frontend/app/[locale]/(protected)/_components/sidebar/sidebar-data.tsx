@@ -12,47 +12,47 @@ export default function SidebarData() {
             navMain: [
                 {
                     title: "Dashboard",
-                    url: "/dashboard",
+                    url: "/u/dashboard",
                     icon: LayoutDashboardIcon,
                 },
                 {
                     title: "Fakülteler",
-                    url: "/faculty",
+                    url: "/u/faculty",
                     icon: TerminalSquare,
                 },
                 {
                     title: "Bölümler",
-                    url: "/department",
+                    url: "/u/department",
                     icon: BotIcon,
                 },
                 {
                     title: "Dersler",
-                    url: "/lessonss",
+                    url: "/u/lessons",
                     icon: BookOpenIcon,
                 },
                 {
                     title: "Öğretmenler",
-                    url: "/teachers",
+                    url: "/u/teachers",
                     icon: UsersIcon,
                 },
                 {
                     title: "Öğrenciler",
-                    url: "/students",
+                    url: "/u/students",
                     icon: UsersIcon,
                 },
                 {
                     title: "Dönemler",
-                    url: "/period",
+                    url: "/u/period",
                     icon: PercentDiamond,
                 },
                 {
                     title: "Ayarlar",
-                    url: "/university-setting",
+                    url: "/u/university-setting",
                     icon: SettingsIcon,
                 },
                 {
                     title: "Destek",
-                    url: "/support",
+                    url: "/u/support",
                     icon: CircleHelpIcon,
                 },
             ],
@@ -62,22 +62,22 @@ export default function SidebarData() {
             navMain: [
                 {
                     title: "Dashboard",
-                    url: "/dashboard",
+                    url: "/t/dashboard",
                     icon: LayoutDashboardIcon,
                 },
                 {
                     title: "Dersler",
-                    url: "/lessons",
+                    url: "/t/lessons",
                     icon: BookOpenIcon,
                 },
                 {
                     title: "Öğrenciler",
-                    url: "/student",
+                    url: "/t/student",
                     icon: UsersIcon,
                 },
                 {
                     title: "Destek",
-                    url: "/support",
+                    url: "/t/support",
                     icon: CircleHelpIcon,
                 },
             ],
@@ -87,22 +87,22 @@ export default function SidebarData() {
             navMain: [
                 {
                     title: "Dashboard",
-                    url: "/dashboard",
+                    url: "/s/dashboard",
                     icon: LayoutDashboardIcon,
                 },
                 {
                     title: "Dersler",
-                    url: "/lesson",
+                    url: "/s/lessons",
                     icon: BookOpenIcon,
                 },
                 {
                     title: "Geçmişim",
-                    url: "/score",
+                    url: "/s/score",
                     icon: UsersIcon,
                 },
                 {
                     title: "Destek",
-                    url: "/support",
+                    url: "/s/support",
                     icon: CircleHelpIcon,
                 },
             ],
