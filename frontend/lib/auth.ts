@@ -2,8 +2,7 @@ import { UserDTO } from "@/types";
 import fetcher from "./fetcher";
 import { cookies } from "next/headers";
 
-const USER_CACHE_KEY = 'cached_user';
-const CACHE_TTL = 5 * 60 * 1000; // 5 dakika
+const CACHE_TTL = 5 * 60 * 1000;
 
 let cachedUser: { data: UserDTO | null; timestamp: number } | null = null;
 

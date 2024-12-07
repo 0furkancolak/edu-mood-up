@@ -3,6 +3,7 @@
 import useAuth from "@/hooks/use-auth";
 import { UserDTO } from "@/types";
 import React, { createContext, useContext } from "react";
+import Cookies from "js-cookie";
 
 type AuthContextType = {
   user?: UserDTO;
@@ -20,7 +21,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const { data, error, isLoading, isFetching, refetch, isAuthenticated } = useAuth();
   const user = data?.data?.user || null;
-
+  
   return (
     <AuthContext.Provider
       value={{ user, error, isLoading, isFetching, refetch, isAuthenticated }}
