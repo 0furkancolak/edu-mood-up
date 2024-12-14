@@ -1,17 +1,15 @@
 import { LinkTabs, LinkTabsList, LinkTabsTrigger } from "@/components/ui/link-tabs"
 import { Card } from "@/components/ui/card"
-import TeacherLessonList from "../_components/TeacherLessonList"
-import { CreateLessonButton } from "../_components/CreateLessonButton"
+import TeacherLessonList from "../../_components/TeacherLessonList"
 
-export default function TeacherLessonsPage() {
+export default function TeacherPastLessonsPage() {
   return (
     <div className="container space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold tracking-tight">Dersler</h1>
-        <CreateLessonButton />
       </div>
 
-      <LinkTabs defaultValue="current" className="w-full">
+      <LinkTabs defaultValue="past" className="w-full">
         <LinkTabsList>
           <LinkTabsTrigger value="current" href="/t/lessons">
             Mevcut Dönem Dersleri
@@ -23,8 +21,8 @@ export default function TeacherLessonsPage() {
       </LinkTabs>
 
       <Card className="p-4">
-        <TeacherLessonList />
+        <TeacherLessonList isPastLessons />
       </Card>
     </div>
   )
-}
+} 

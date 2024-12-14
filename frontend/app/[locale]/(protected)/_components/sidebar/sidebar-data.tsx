@@ -7,6 +7,31 @@ import { BookOpenIcon, UsersIcon, HomeIcon } from 'lucide-react'
 export default function SidebarData() {
     const { user } = useAuthContext()
 
+    return {
+        navMain: [
+            {
+                title: "Dashboard",
+                url: "/t/dashboard",
+                icon: LayoutDashboardIcon,
+            },
+            {
+                title: "Dersler",
+                url: "/t/lessons",
+                icon: BookOpenIcon,
+            },
+            {
+                title: "Öğrenciler",
+                url: "/t/student",
+                icon: UsersIcon,
+            },
+            {
+                title: "Destek",
+                url: "/t/support",
+                icon: CircleHelpIcon,
+            },
+        ],
+    }
+
     if (user?.role === UserRole.UNIVERSITY) {
         return {
             navMain: [
