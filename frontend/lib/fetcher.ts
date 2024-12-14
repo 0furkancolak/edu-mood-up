@@ -49,10 +49,25 @@ export default async function fetcher<T>(
             },
         });
 
+
+
         if (!response.ok) {
             const error = await response.json().catch(() => ({
                 message: 'Bir hata oluştu',
             }));
+
+            if (response.status === 401 || error.errorCode === 'AUTH_TOKEN_NOT_FOUND') {
+
+                await fetch(`${baseUrl}/auth/logout`, {
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Cookie': cookieHeader,
+                    },
+                });
+                
+            }
+
             throw new Error(error.message || `HTTP error! status: ${response.status}`);
         }
 
